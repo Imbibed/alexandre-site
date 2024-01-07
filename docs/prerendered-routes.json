@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/",
+    "/cabinet",
+    "/droit-civil",
+    "/droit-des-victimes",
+    "/fee"
+  ]
+}
