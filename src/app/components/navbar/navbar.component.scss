@@ -1,0 +1,53 @@
+@use "sass:map";
+@import '../../../styles';
+
+:host{
+  display: block;
+  border-bottom: 1px solid map.get($website-font-color, "grey");
+  @include desktop {
+    width: 100%;
+    height: 125px;
+    padding: 25px 0;
+  }
+}
+
+a {
+  font-family: $website-font-family;
+  color: map.get($website-font-color, "grey");
+}
+
+.navbar-content-container {
+  height: inherit;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-left: 3px solid black;
+
+  .website-owner{
+    margin-left: 20px;
+    flex-grow: 1;
+  }
+  .navigation{
+    flex-grow: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .contact{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fake-button{
+      background-color: map.get($website-font-color, "violet");
+      color: white;
+      padding: 16px;
+      border-radius: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

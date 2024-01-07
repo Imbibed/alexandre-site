@@ -1,0 +1,36 @@
+@use "sass:map";
+
+body {
+  margin:0;
+}
+
+$website-font-family: Montserrat, sans-serif;
+$website-font-color: (
+  "violet": #130377,
+  "grey": #2C2C2C,
+  "black": #000000,
+  "yellow": #FFA300
+);
+
+p, h1, h2, h3, h4 {
+  font-family: $website-font-family;
+  color: map.get($website-font-color, "grey");
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 768px) {
+    @content
+  }
+}
