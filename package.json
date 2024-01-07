@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:alexandre-site": "node dist/alexandre-site/server/server.mjs"
+    "serve:ssr:alexandre-site": "node docs/server/server.mjs"
   },
   "private": true,
   "dependencies": {
