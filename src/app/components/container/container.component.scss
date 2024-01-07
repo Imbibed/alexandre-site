@@ -1,0 +1,20 @@
+@use "sass:map";
+@import '../../../styles';
+
+:host{
+  display: grid;
+  @include desktop {
+    max-width: 1280px;
+    margin: auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  @include tablet {
+    max-width: 880px;
+    margin: auto;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include mobile {
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

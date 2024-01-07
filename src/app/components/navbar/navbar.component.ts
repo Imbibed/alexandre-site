@@ -9,5 +9,11 @@ import {NavlinkComponent} from "./navlink/navlink.component";
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  public navigations: {label: string, route: string}[] = [
+    {label: 'Accueil',route: ''},
+    {label: 'Droit des victimes',route: 'droit-des-victimes'},
+    {label: 'Droit civil',route: 'droit-civil'},
+    {label: 'Cabinet',route: 'cabinet'},
+    {label: 'Honoraires',route: 'fee'}
+  ];
 }

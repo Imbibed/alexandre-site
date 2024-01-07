@@ -6,12 +6,12 @@
   border-bottom: 1px solid map.get($website-font-color, "grey");
   @include desktop {
     width: 100%;
-    height: 125px;
+    height: 80px;
     padding: 25px 0;
   }
 }
 
-a {
+a, span {
   font-family: $website-font-family;
   color: map.get($website-font-color, "grey");
 }
@@ -26,8 +26,12 @@ a {
   border-left: 3px solid map.get($website-font-color, "violet");
 
   .website-owner{
+    height: 100%;
     margin-left: 20px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .navigation{
     flex-grow: 6;

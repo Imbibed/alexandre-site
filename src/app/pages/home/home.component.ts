@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
 import {PageService} from "../../services/page.service";
+import {ContainerComponent} from "../../components/container/container.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ContainerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

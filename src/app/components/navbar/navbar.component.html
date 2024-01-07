@@ -1,13 +1,12 @@
 <div class='navbar-content-container'>
   <div class='website-owner'>
-    <p><b>Alexandre MAAT</b></p>
-    <p>Avocat à la Cour</p>
+    <span><b>Alexandre MAAT</b></span>
+    <span>Avocat à la Cour</span>
   </div>
   <div class='navigation'>
-    <app-navlink [label]="'Droit des victimes'" [route]="'droit-des-victimes'"/>
-    <app-navlink [label]="'Droit civil'" [route]="'droit-civil'"/>
-    <app-navlink [label]="'Cabinet'" [route]="'cabinet'"/>
-    <app-navlink [label]="'Honoraires'" [route]="'fee'"/>
+    @for (navigation of navigations; track navigation.route){
+      <app-navlink [label]="navigation.label" [route]="navigation.route"/>
+    }
   </div>
   <div class='contact'>
     <a class="fake-button"><b>Contact</b></a>
