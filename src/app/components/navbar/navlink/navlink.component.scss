@@ -1,0 +1,13 @@
+@use "sass:map";
+@import '../../../../styles';
+
+a {
+  font-family: $website-font-family;
+  color: map.get($website-font-color, "grey");
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+  &:hover {
+    cursor: pointer;
+    text-decoration-color: map.get($website-font-color, "violet");
+  }
+}

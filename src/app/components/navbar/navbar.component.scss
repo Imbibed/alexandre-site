@@ -23,7 +23,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-left: 3px solid black;
+  border-left: 3px solid map.get($website-font-color, "violet");
 
   .website-owner{
     margin-left: 20px;
