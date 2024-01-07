@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Meta} from "@angular/platform-browser";
+import {PageService} from "../../services/page.service";
 
 @Component({
   selector: 'app-victimsrights',
@@ -9,9 +10,9 @@ import {Meta} from "@angular/platform-browser";
   styleUrl: './victimsrights.component.scss'
 })
 export class VictimsrightsComponent {
-  constructor(private metaService: Meta){
+  constructor(private pageService: PageService){
   }
   ngOnInit() {
-    this.metaService.updateTag({name: 'description', content: 'Le droit des victimes'});
+    this.pageService.loadSeo('https://Alexandremaat-avocat.fr/droit-des-victimes', 'TODO');
   }
 }

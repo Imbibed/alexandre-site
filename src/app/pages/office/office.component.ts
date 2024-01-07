@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Meta} from "@angular/platform-browser";
+import {PageService} from "../../services/page.service";
 
 @Component({
   selector: 'app-office',
@@ -9,9 +10,9 @@ import {Meta} from "@angular/platform-browser";
   styleUrl: './office.component.scss'
 })
 export class OfficeComponent {
-  constructor(private metaService: Meta){
+  constructor(private pageService: PageService){
   }
   ngOnInit() {
-    this.metaService.updateTag({name: 'description', content: 'Le cabinet'});
+    this.pageService.loadSeo('https://Alexandremaat-avocat.fr', 'TODO');
   }
 }

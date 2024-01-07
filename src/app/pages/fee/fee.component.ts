@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Meta} from "@angular/platform-browser";
+import {PageService} from "../../services/page.service";
 
 @Component({
   selector: 'app-fee',
@@ -9,9 +10,9 @@ import {Meta} from "@angular/platform-browser";
   styleUrl: './fee.component.scss'
 })
 export class FeeComponent {
-  constructor(private metaService: Meta){
+  constructor(private pageService: PageService){
   }
   ngOnInit() {
-    this.metaService.updateTag({name: 'description', content: 'Les honoraires'});
+    this.pageService.loadSeo('https://Alexandremaat-avocat.fr', 'TODO');
   }
 }
