@@ -26,5 +26,5 @@ jobs:
       - name: deploy website
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dur: ./docs
+          publish_dur: ./docs/browser
       
