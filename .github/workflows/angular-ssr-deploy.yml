@@ -19,7 +19,7 @@ jobs:
         run: echo "Checkout over"
 
       - name: Install Latest Angular
-        uses: actions/angular-github-actions@v1
+        run: npm install -g @angular/cli@latest
 
       - name: echo2
         run: echo "Install Latest Angular over"
