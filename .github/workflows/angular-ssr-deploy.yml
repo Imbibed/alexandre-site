@@ -1,0 +1,30 @@
+name: publish website
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version: [ 20.x ]
+        
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Latest Angular
+        uses: actions/angular-github-actions@v1
+
+      - name: npm install
+        run: npm install
+      - name: build app
+        run: npm run build
+      - name: deploy website
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dur: ./docs
+      
