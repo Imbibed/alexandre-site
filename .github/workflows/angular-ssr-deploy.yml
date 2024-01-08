@@ -37,7 +37,5 @@ jobs:
         run: echo "build app over"
         
       - name: deploy website
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dur: ./docs/browser
+        run: npm run serve:ssr:alexandre-site
       
