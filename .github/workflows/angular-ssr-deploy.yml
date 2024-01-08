@@ -13,30 +13,15 @@ jobs:
         node-version: [ 20.x ]
         
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: echo1
-        run: echo "Checkout over"
-
+      - uses: actions/checkout@v2
+        
       - name: Install Latest Angular
         uses: actions/angular-github-actions@v1
 
-      - name: echo2
-        run: echo "Install Latest Angular over"
-
       - name: npm install
         run: npm install
-
-      - name: echo3
-        run: echo "npm install over"
-        
       - name: build app
         run: npm run build
-
-      - name: echo4
-        run: echo "build app over"
-        
       - name: deploy website
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
